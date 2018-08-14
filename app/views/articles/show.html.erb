@@ -1,0 +1,22 @@
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">
+      <%= @article.title %>
+      </h1>
+      <%= link_to "edit" %>
+      <%= link_to "delete",
+        article_path(@article),
+        method: "delete",
+        data: {confirm: "T'es sur ou bien ?"}
+      %>
+    <p class="lead">
+      <%= @article.content %>
+    </p>
+  </div>
+</div>
+<div class="container">
+  <p>
+    <%= @article.content %>
+  </p>
+</div>
